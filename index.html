@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <link rel="stylesheet" href="./css/all.min.css">
+    <link rel="stylesheet" href="./css/bootstrap.min.css">
+    <link rel="stylesheet" href="./css/style.css">
+</head>
+
+<body>
+    <div class="container my-5">
+        <div>
+            <label for="productName">productName</label>
+            <input class="my-2 form-control " type="text" id="productName">
+            <small class="text-muted">productName must be chars only</small>
+        </div>
+        <div>
+            <label for="productPrice">productPrice</label>
+            <input class="my-2 form-control " type="number" id="productPrice">
+            <small class="text-muted">productPrice must be chars only</small>
+        </div>
+        <div>
+            <label for="productCategory">productCategory:</label>
+            <input class="my-2 form-control " type="text" id="productCategory">
+            <small class="text-muted">productCategory must be chars only</small>
+        </div>
+        <div>
+            <label for="productDesc">productDesc:</label>
+            <textarea class="my-2 form-control" type="text" id="productDesc"></textarea>
+            <small class="text-muted">productDesc must be chars only</small>
+        </div>
+        <button onclick="addProduct()" class="btn btn-outline-info my-3"> Add product</button>
+    </div>
+    <div>
+        <div class="container my-5">
+            <p class="my-2 fw-3">Search by product name:</p>
+            <input onkeyup="searchProduct(this.value)" type="text" class="form-control" id="productNameInput">
+        </div>
+    </div>
+    <div>
+        <table class="w-75 text-center table border m-auto py-5">
+            <thead>
+                <th>index</th>
+                <th>name</th>
+                <th>price</th>
+                <th>category</th>
+                <th>desc</th>
+                <th>update</th>
+                <th>delete</th>
+            </thead>
+            <tbody id="displayBody">
+
+            </tbody>
+        </table>
+    </div>
+
+
+
+
+
+    <script src="./main.js"></script>
+</body>
+
+</html>
