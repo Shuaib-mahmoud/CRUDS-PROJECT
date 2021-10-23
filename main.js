@@ -29,9 +29,9 @@ function addProduct() {
     description: productDescInput.value,
   }
   console.log(ourProduct);
-  productsContainer.push(ourProduct)
-  localStorage.setItem('ourProducts', JSON.stringify(productsContainer))
-  // clearForm()
+  productsContainer.push(ourProduct);
+  localStorage.setItem('ourProducts', JSON.stringify(productsContainer));
+  clearForm()
   displayProduct()
 }
 
