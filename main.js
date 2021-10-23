@@ -1,19 +1,22 @@
 'use strict'
 if (localStorage.getItem('ourProducts') != null) {
   productsContainer = JSON.parse(localStorage.getItem('ourProducts'));
-  displayProduct()
+  displayProduct();
+  noProduct()
 }
 else {
   var productsContainer = [];
+  noProduct()
 }
 
 function noProduct() {
-  var x = document.getElementById("No-data");
+  var noData = document.getElementById("nodata");
   if (localStorage.getItem('ourProducts') != null) {
-    x.style.display = "none";
+    noData.style.display = "none";
   } else {
-    x.style.display = "block";
+    noData.style.display = "block";
   }
+}
 }
 var productNameInput = document.getElementById('productName');
 var productPriceInput = document.getElementById('productPrice');
