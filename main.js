@@ -2,20 +2,19 @@
 if (localStorage.getItem('ourProducts') != null) {
   productsContainer = JSON.parse(localStorage.getItem('ourProducts'));
   displayProduct();
-  noProduct()
 }
 else {
   var productsContainer = [];
-  noProduct()
+  alternate()
+function alternate() {
+  var alternative = ``
+  alternative +=` <div>
+<h3  class=" fs-3">No data added</h3>
+</div>`;
+  document.getElementById('nodata').innerHTML = alternative
+  console.log(alternative)
+  
 }
-
-function noProduct() {
-  var noData = document.getElementById("nodata");
-  if (localStorage.getItem('ourProducts') != null) {
-    noData.style.display = "none";
-  } else {
-    noData.style.display = "block";
-  }
 }
 
 var productNameInput = document.getElementById('productName');
@@ -23,20 +22,19 @@ var productPriceInput = document.getElementById('productPrice');
 var productCategoryInput = document.getElementById('productCategory');
 var productDescInput = document.getElementById('productDesc');
 
-
-function addProduct() {
+document.getElementById('addProduct').addEventListener('click', function () {
   var ourProduct = {
     name: productNameInput.value,
     price: productPriceInput.value,
     category: productCategoryInput.value,
     description: productDescInput.value,
   }
-  productsContainer.push(ourProduct);
+  console.log(ourProduct);
+  productsContainer.push(ourProduct)
   localStorage.setItem('ourProducts', JSON.stringify(productsContainer));
-  displayProduct()
-  clearForm()
+  displayProduct();
 }
-
+)
 function clearForm() {
   productNameInput.value = '';
   productPriceInput.value = '';
