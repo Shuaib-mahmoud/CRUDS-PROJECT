@@ -17,7 +17,7 @@ function noProduct() {
     noData.style.display = "block";
   }
 }
-}
+
 var productNameInput = document.getElementById('productName');
 var productPriceInput = document.getElementById('productPrice');
 var productCategoryInput = document.getElementById('productCategory');
