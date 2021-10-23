@@ -33,8 +33,8 @@ function addProduct() {
   }
   productsContainer.push(ourProduct);
   localStorage.setItem('ourProducts', JSON.stringify(productsContainer));
-  clearForm()
   displayProduct()
+  clearForm()
 }
 
 function clearForm() {
