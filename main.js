@@ -2,11 +2,18 @@
 if (localStorage.getItem('ourProducts') != null) {
   productsContainer = JSON.parse(localStorage.getItem('ourProducts'));
   displayProduct()
-  document.getElementById("No-data").style.display = "none";
 }
 else {
   var productsContainer = [];
-  document.getElementById("No-data").style.display = "block";
+}
+
+function noProduct() {
+  var x = document.getElementById("No-data");
+  if (localStorage.getItem('ourProducts') != null) {
+    x.style.display = "none";
+  } else {
+    x.style.display = "block";
+  }
 }
 var productNameInput = document.getElementById('productName');
 var productPriceInput = document.getElementById('productPrice');
